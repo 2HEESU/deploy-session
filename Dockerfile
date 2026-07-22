@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install gunicorn
 
 # 6. 내 컴퓨터의 장고 프로젝트 소스코드를 컨테이너 내부로 전부 복사
-COPY . /app/
+COPY . /app/ 
 
 # 7. 정적 파일을 한 곳에 모으기
 RUN python manage.py collectstatic --noinput
